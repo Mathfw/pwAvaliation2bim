@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container div {
+  margin: 1.4em 0;
+}
+.social-media img {
+  margin: 0 1em;
+}
+.footer {
+  height: 12em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #dde0e4;
+}
+.footer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1em;
+}
+.footer div img {
+  margin: 0 0.5em;
+}
+.footer div p {
+  margin: 0 0.5em;
+}

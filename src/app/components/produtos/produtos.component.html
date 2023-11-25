@@ -1,0 +1,57 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let product of productList">
+      <div class="head">
+        <img
+          width="32px"
+          src="../../../assets/dollar-circle-svgrepo-com.svg"
+          alt="dollar"
+        />
+        <img
+          width="32px"
+          src="../../../assets/heart-svgrepo-com.svg"
+          alt="heart"
+        />
+      </div>
+      <img
+        class="image"
+        class="productImage"
+        [src]="product.urlImge"
+        [alt]="product.heading"
+      />
+      <span class="rating">
+        {{ product.rating }}
+        <img
+          src="../../../assets/star-svgrepo-com.svg"
+          alt="star"
+          width="16px"
+        />
+      </span>
+      <h2 class="heading">{{ product.heading }}</h2>
+      <div class="price-container">
+        <p class="oldPrice">{{ product.oldPrice }}<span class="line"></span></p>
+        <p class="currentPrice">{{ product.currentPrice }}</p>
+        <span class="discount" *ngIf="product.oldPrice">
+          {{ getDiscount(product.oldPrice, product.currentPrice) }}
+          <img
+            src="../../../assets/arrow-sm-down-svgrepo-com.svg"
+            alt="down arrow"
+            width="16px"
+          />
+        </span>
+      </div>
+    </li>
+  </ul>
+  <img
+    class="left-arrow"
+    width="48px"
+    src="../../../assets/arrow-sm-left-svgrepo-com.svg"
+    alt="left arrow"
+  />
+  <img
+    class="right-arrow"
+    width="48px"
+    src="../../../assets/arrow-sm-right-svgrepo-com.svg"
+    alt="right arrow"
+  />
+</div>

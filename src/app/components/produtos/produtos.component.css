@@ -1,0 +1,125 @@
+.container {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-arrow {
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+}
+.right-arrow {
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  margin-right: 2em;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: 4em 3em;
+  padding: 0;
+}
+ul .head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+li {
+  appearance: none;
+  list-style: none;
+  width: 26em;
+  height: 38em;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+
+li .productImage {
+  width: 100%;
+  object-fit: contain;
+}
+.rating {
+  background-color: #1e9777;
+  color: white;
+  padding: 0.2em 0.8em;
+  border-radius: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+h2,
+.currentPrice,
+.oldPrice {
+  overflow-wrap: break-word;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.price-container {
+  display: grid;
+  grid-template-columns: 88% 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.price-container .currentPrice {
+  margin: 0;
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e9777;
+}
+.price-container .currentPrice::before {
+  content: "R$ ";
+}
+.price-container .oldPrice {
+  position: relative;
+  margin: 0;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 0.7rem;
+}
+.price-container .oldPrice::before {
+  content: "R$ ";
+}
+.price-container .oldPrice .line {
+  position: absolute;
+  top: 28%;
+  left: 0;
+  width: 4em;
+  height: 1px;
+  background-color: black;
+}
+.price-container .discount {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e9777;
+  color: white;
+  font-weight: 800;
+  border-radius: 1em;
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
